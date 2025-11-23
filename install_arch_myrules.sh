@@ -43,7 +43,7 @@ SWAP_PART="${TARGET_DEV}${SWAP_PART}"
 ROOT_PART="${TARGET_DEV}${ROOT_PART}"
 
 echo "Formatting /boot"
-if [ "$TARGET_UEFI" = "true"]; then
+if [ "$TARGET_UEFI" = "true" ]; then
     mkfs.vfat -F 32 ${BOOT_PART}
 else
     mkfs.ext4 -F ${BOOT_PART}

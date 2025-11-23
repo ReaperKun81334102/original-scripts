@@ -183,7 +183,7 @@ bluetooth='bluez bluez-hid2hci bluez-tools bluez-utils'
 browser='elinks firefox'
 editor='hexedit nano vim'
 filesystem='cifs-utils dmraid exfat-utils f2fs-tools efibootmgr dosfstools
-gpart gptfdisk mtools nilfs-utils ntfs-3g partclone parted partimage'
+gpart gptfdisk mtools nilfs-utils ntfs-3g partclone parted grub partimage'
 filemanager='thunar ark dolphin'
 media='ffmpeg yt-dlp mpv'
 audio='alsa-utils pipewire-pulse pavucontrol'

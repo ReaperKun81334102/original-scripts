@@ -15,16 +15,7 @@ read TARGET_DEV
 printf "\n
 NOTICE: Do not touch the keyboard during installation until instructed to do so. \n"
 printf "Installation will begin in 5 seconds "
-printf "."
-sleep 1
-printf "."
-sleep 1
-printf "."
-sleep 1
-printf "."
-sleep 1
-printf ". \n"
-sleep 1
+sleep 5
 echo "Starting installation ..."
 
 

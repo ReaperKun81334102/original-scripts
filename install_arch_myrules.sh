@@ -260,6 +260,7 @@ tee /mnt/etc/fonts/conf.d/60-generic-cjk.conf > /dev/null << 'EOF'
 </fontconfig>
 EOF
 
+echo "updating fontconfig cache"
 chroot /mnt fc-cache -fv
 
 # other

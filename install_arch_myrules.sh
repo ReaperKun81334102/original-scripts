@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
-# ArchLinux カスタムオリジナル全自動インストールスクリプト
+# ArchLinux カスタムオリジナル全自動インストールスクリプト (UEFI Only)
 
 # config
 TARGET_UEFI="true"
 BOOT_PART="1"
-SWAP_PART="5"
-ROOT_PART="6"
+SWAP_PART="2"
+ROOT_PART="3"
 
 # ask target dev
 printf "Enter target device (/dev/sdX) : "
 read TARGET_DEV
 
 printf "\n
-    NOTICE: Do not touch the keyboard during the installation. \n"
+NOTICE: Do not touch the keyboard during the installation. \n"
+
 printf "Installation will begin in 5 seconds "
 printf "."
 sleep 1
@@ -22,9 +23,9 @@ printf "."
 sleep 1
 printf "."
 sleep 1
-printf "."
+printf ". \n"
 sleep 1
-echo "Starting installation"
+echo "Starting installation ..."
 
 
 # setup locales

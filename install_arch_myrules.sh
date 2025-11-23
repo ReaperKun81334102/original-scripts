@@ -221,6 +221,57 @@ QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5
 \n" > /mnt/etc/environment
 
+# default font setups
+mkdir -p /mnt/etc/fonts/conf.d
+tee /mnt/etc/fonts/conf.d/60-generic-cjk.conf > /dev/null << 'EOF'
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+
+  <!-- デフォルトフォントを Noto CJK JP に置き換え -->
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Noto Sans CJK JP</family>
+      <family>Noto Color Emoji</family>
+      <family>emoji</family>
+    </prefer>
+  </alias>
+
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>Noto Serif CJK JP</family>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>Noto Sans Mono CJK JP</family>
+      <family>Noto Color Emoji</family>
+    </prefer>
+  </alias>
+
+  <!-- 従来のフォント名にも割り当て（互換性向上） -->
+  <match target="pattern">
+    <test name="family"><string>sans</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Noto Sans CJK JP</string>
+    </edit>
+  </match>
+
+  <match target="pattern">
+    <test name="family"><string>serif</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Noto Serif CJK JP</string>
+    </edit>
+  </match>
+
+</fontconfig>
+EOF
+
 # setup boot loader
 echo "installing bootloader"
 

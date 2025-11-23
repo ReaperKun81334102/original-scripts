@@ -216,9 +216,10 @@ chroot /mnt systemctl enable iwd NetworkManager gdm
 
 # setup configs
 printf "
-GTK_IM_MODULE=fcitx5 \n
-QT_IM_MODULE=fcitx5 \n
-XMODIFIERS=@im=fcitx5 \n" > /mnt/etc/environment
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
+\n" > /mnt/etc/environment
 
 # setup boot loader
 echo "installing bootloader"

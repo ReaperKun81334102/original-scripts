@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ArchLinux カスタムオリジナル全自動インストールスクリプト (UEFI Only)
+# ArchLinux カスタムオリジナル全自動インストールスクリプト (UEFI)
 # 注意: このスクリプトは途中で中断すると再起動しないと再び使用できません！
 
 # config

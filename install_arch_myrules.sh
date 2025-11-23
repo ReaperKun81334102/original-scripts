@@ -282,9 +282,10 @@ chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
 # finish
 echo "updating initramfs"
-chroot /mnt mkinitcpio -P
 
+chroot /mnt mkinitcpio -P
 sync
 
+# dones
 echo "Install complete!"
 exit 0

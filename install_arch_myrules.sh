@@ -122,7 +122,6 @@ mount --rbind /dev "/mnt/dev"
 mount --make-rslave "/mnt/dev"
 
 # setup locales
-sed -i "s/^#en_US.UTF-8/en_US.UTF-8/" "/mnt/etc/locale.gen"
 sed -i "s/^#$LOCALE/$LOCALE/" "/mnt/etc/locale.gen"
 chroot /mnt locale-gen 
 echo "LANG=$LOCALE" > "/mnt/etc/locale.conf"

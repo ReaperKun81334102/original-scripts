@@ -169,8 +169,6 @@ chroot /mnt useradd -g "$user" -d "/home/$user" -s "/bin/bash" \
 chroot /mnt chown -R "$user":"$user" "/home/$user" 
 echo "$user ALL=(ALL:ALL) ALL" >> /mnt/etc/sudoers 
 echo "root ALL=(ALL:ALL) ALL" >> /mnt/etc/sudoers
-
-echo "Setup password: "
 chroot /mnt passwd $user
 
 # setup extra packages

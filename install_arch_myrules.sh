@@ -193,7 +193,7 @@ misc='acpi git haveged hdparm htop inotify-tools ipython irssi
 linux-atm lsof mercurial mesa mlocate moreutils p7zip rsync lsb-release
 rtorrent screen scrot smartmontools strace tmux udisks2 unace unrar
 unzip upower usb_modeswitch usbutils zip fcitx5-im fcitx5-mozc python'
-fonts='ttf-dejavu ttf-indic-otf ttf-liberation xorg-fonts-misc unicode-emoji noto-fonts-emoji noto-fonts-cjk noto-fonts-extra'
+fonts='ttf-dejavu ttf-indic-otf ttf-liberation xorg-fonts-misc unicode-emoji noto-fonts-emoji noto-fonts-cjk noto-fonts-extra noto-fonts'
 network='atftp bind-tools bridge-utils darkhttpd dhclient dhcpcd dialog
 dnscrypt-proxy dnsmasq dnsutils fwbuilder iw networkmanager
 iwd lftp nfs-utils ntp openconnect openssh openvpn ppp pptpclient rfkill
@@ -221,14 +221,13 @@ QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5
 \n" > /mnt/etc/environment
 
-# default font setups
+# setup default font
 mkdir -p /mnt/etc/fonts/conf.d
 tee /mnt/etc/fonts/conf.d/60-generic-cjk.conf > /dev/null << 'EOF'
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
 
-  <!-- デフォルトフォントを Noto CJK JP に置き換え -->
   <alias>
     <family>sans-serif</family>
     <prefer>
@@ -271,6 +270,8 @@ tee /mnt/etc/fonts/conf.d/60-generic-cjk.conf > /dev/null << 'EOF'
 
 </fontconfig>
 EOF
+
+chroot /mnt fc-cache -fv
 
 # setup boot loader
 echo "installing bootloader"

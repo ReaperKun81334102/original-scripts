@@ -273,6 +273,10 @@ EOF
 
 chroot /mnt fc-cache -fv
 
+# other
+chroot /mnt wget https://raw.githubusercontent.com/ReaperKun81334102/original-scripts/refs/heads/main/usr/bin/rescan-ata.sh -O /usr/local/bin/rescan-ata
+chroot /mnt chmod +x /usr/local/bin/rescan-ata
+
 # setup boot loader
 echo "installing bootloader"
 

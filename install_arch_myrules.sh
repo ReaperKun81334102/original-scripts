@@ -189,7 +189,7 @@ audio='alsa-utils pipewire-pulse pavucontrol'
 hardware='amd-ucode intel-ucode'
 kernel='linux-headers'
 misc='acpi git haveged hdparm htop inotify-tools ipython irssi
-linux-atm lsof mercurial mesa mlocate moreutils p7zip rsynclsb-release
+linux-atm lsof mercurial mesa mlocate moreutils p7zip rsync lsb-release
 rtorrent screen scrot smartmontools strace tmux udisks2 unace unrar
 unzip upower usb_modeswitch usbutils zip fcitx5-im fcitx5-mozc python'
 fonts='ttf-dejavu ttf-indic-otf ttf-liberation xorg-fonts-misc unicode-emoji noto-fonts-emoji noto-fonts-cjk noto-fonts-extra'

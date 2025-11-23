@@ -88,7 +88,7 @@ sed -i 's/^#Color/Color/' "/etc/pacman.conf"
   fi
 
 printf 'Server = https://mirror.rackspace.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
-pacman -Sy --noconfirm
+pacman -Sy --noconfirm --needed archlinux-keyring
   pacman -S --needed --noconfirm reflector
   yes | pacman -Scc
   reflector --verbose --latest 5 --country "Japan" --protocol https --sort rate \

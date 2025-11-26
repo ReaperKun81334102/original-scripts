@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # ArchLinux カスタムオリジナル全自動インストールスクリプト (UEFIのみ対応)
 # 注意: このスクリプトは途中で中断すると再起動しないと再び使用できません。
+# このスクリプトはUEFI環境でのみ対応します。Legacy BIOSでは正常にインストールできませんのでUEFIモードで起動してお試しください。
 
 # config
 TARGET_UEFI="true"

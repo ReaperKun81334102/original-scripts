@@ -123,7 +123,7 @@ chroot /mnt ln -sf "/usr/share/zoneinfo/Asia/Tokyo" /etc/localtime
 
 # setup chroot env pacman
 cp -rvf /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
-sed -i "s/#ParallelDownloads/ParallelDownloads/" "/mnt/etc/pacman.conf"
+#sed -i "s/#ParallelDownloads/ParallelDownloads/" "/mnt/etc/pacman.conf"
 sed -i 's/^#Color/Color/' "/mnt/etc/pacman.conf"
   if [ "$(uname -m)" = "x86_64" ]
   then

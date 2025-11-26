@@ -197,7 +197,7 @@ desktop="gnome gnome-extra gnome-screenshot gnome-keyring"
 all="$arch $bluetooth $browser $editor $filesystem $fonts $hardware $kernel"
 all="$all $misc $network $xorg $audio $media $filemanager $desktop"
 
-chroot /mnt pacman -Sy --noconfirm --needed --overwrite="*" $all
+chroot /mnt pacman -Sy --noconfirm --needed --overwrite="*" --disable-download-timeout $all
 
 
 # setup systemd

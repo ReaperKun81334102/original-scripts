@@ -94,7 +94,8 @@ echo "Installing ArchLinux base packages"
 mkdir -p "/mnt/etc/" 
 cp -L /etc/resolv.conf "/mnt/etc/resolv.conf" 
 pacstrap /mnt base base-devel btrfs-progs linux linux-firmware \
-  terminus-font zsh-completions grml-zsh-config
+  terminus-font zsh-completions grml-zsh-config \
+  --disable-download-timeout
 
 
 # setup base system

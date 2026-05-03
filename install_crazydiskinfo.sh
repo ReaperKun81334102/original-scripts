@@ -1,6 +1,6 @@
 #!/bin/bash
 ARGV="$1"
-UNINSTALL_TARGET='https://github.com/otakuto/crazydiskinfo/archive/refs/tags/1.1.0.tar.gz'
+UNINSTALL_TARGET='/usr/sbin/crazy'
 if [ "${ARGV}" = "uninstall" ]; then
     echo "Uninstalling..."
     rm -rvf "${UNINSTALL_TARGET}"

@@ -8,9 +8,10 @@ if [ "${ARGV}" = "uninstall" ]; then
 fi
 
 # TARGETS
-TARGET_SOURCE_URL='https://github.com/otakuto/crazydiskinfo/archive/refs/tags/1.1.0.tar.gz'
-TARGET_SOURCE='1.1.0.tar.gz'
-TARGET_DIRECTORY="crazydiskinfo-1.1.0"
+TARGET_VERSION="1.1.0"
+TARGET_SOURCE_URL="https://github.com/otakuto/crazydiskinfo/archive/refs/tags/${TARGET_VERSION}.tar.gz"
+TARGET_SOURCE="${TARGET_VERSION}.tar.gz"
+TARGET_DIRECTORY="crazydiskinfo-${TARGET_VERSION}"
 TARGET_BUILDDIR="builddir"
 
 echo "[+] Installing depend"
